@@ -4,33 +4,40 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Biblioteka Biblioteka1 = new Biblioteka(5);
+
+        Ksiazka Ksiazka1 = new Ksiazka("Pan Tadeusz", "Adam Mickiewicz", 300, true);
+        Ksiazka Ksiazka2 = new Ksiazka("W pustyni i w puszczy", "Henryk Sienkiewicz", 250, true);
+        Ksiazka Ksiazka3 = new Ksiazka("Krzyżacy", "Henryk Sienkiewicz", 400, true);
+
+
+        Biblioteka1.dodajKsiazke(Ksiazka1);
+        Biblioteka1.dodajKsiazke(Ksiazka2);
+        Biblioteka1.dodajKsiazke(Ksiazka3);
+
+        System.out.println("Dostępne książki: ");
+        Biblioteka1.wypiszDostepneKsiazki();
+
         Czytelnik Czytelnik1 = new Czytelnik("Jan", "Kowalski", 123, 2);
         Czytelnik Czytelnik2 = new Czytelnik("Anna", "Nowak", 345, 5);
         Czytelnik Czytelnik3 = new Czytelnik("Maria", "Kwiatkowska", 235, 6);
 
+        Biblioteka1.wypozyczKsiazke("Pan Tadeusz", Czytelnik1);
+        Biblioteka1.wypozyczKsiazke("W pustyni i w puszczy", Czytelnik2);
+        Biblioteka1.wypozyczKsiazke("Krzyżacy", Czytelnik3);
 
-        Czytelnik1.wypiszDane();
-        Czytelnik2.wypiszDane();
-        Czytelnik3.wypiszDane();
+        System.out.println("Wypisz dostępne książki po wypożyczeniach: ");
+        Biblioteka1.wypiszDostepneKsiazki();
 
-        Czytelnik1.zwiekszLiczbeWypozyczen();
-        Czytelnik2.zwiekszLiczbeWypozyczen();
-        Czytelnik3.zwiekszLiczbeWypozyczen();
+        Biblioteka1.zwrocKsiazke("Pan Tadeusz", Czytelnik1);
+        Biblioteka1.zwrocKsiazke("W pustyni i w puszczy", Czytelnik2);
+        Biblioteka1.zwrocKsiazke("Krzyżacy", Czytelnik3);
+
+        System.out.println("Wypisz dostępne książki po zwrotach: ");
+        Biblioteka1.wypiszDostepneKsiazki();
 
 
-        System.out.println("Po zwiększeniu wypożyczeń:");
-        Czytelnik1.wypiszDane();
-        Czytelnik2.wypiszDane();
-        Czytelnik3.wypiszDane();
 
-        Czytelnik1.zmniejszLiczbeWypozyczen();
-        Czytelnik2.zmniejszLiczbeWypozyczen();
-        Czytelnik3.zmniejszLiczbeWypozyczen();
-
-        System.out.println("Po zmniejszeniu wypożyczeń:");
-        Czytelnik1.wypiszDane();
-        Czytelnik2.wypiszDane();
-        Czytelnik3.wypiszDane();
 
 
 

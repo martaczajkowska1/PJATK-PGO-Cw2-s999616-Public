@@ -27,4 +27,9 @@ public class Ksiazka {
     public void zwroc(){
         this.dostepna = true;
     }
+
+    public String getTytul(){
+        return tytul;
+    }
 }
+
