@@ -4,35 +4,33 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Ksiazka ksiazka1 = new Ksiazka("Wiedźmin", "Andrzej Sapkowski", 320, true);
-        Ksiazka ksiazka2 = new Ksiazka("Hobbit", "J.R.R. Tolkien", 295, true);
-        Ksiazka ksiazka3 = new Ksiazka("Rok 1984", "George Orwell", 350, false);
-
-        ksiazka1.wypiszInfo();
-        ksiazka2.wypiszInfo();
-        ksiazka3.wypiszInfo();
-
-        ksiazka1.wypozycz();
-        ksiazka2.wypozycz();
-        ksiazka3.wypozycz();
-
-        System.out.println("Po wypożyczeniu");
-
-        ksiazka1.wypiszInfo();
-        ksiazka2.wypiszInfo();
-        ksiazka3.wypiszInfo();
-
-        ksiazka1.zwroc();
-        ksiazka2.zwroc();
-        ksiazka3.zwroc();
-
-        System.out.println("Po zwroóceniu");
-
-        ksiazka1.wypiszInfo();
-        ksiazka2.wypiszInfo();
-        ksiazka3.wypiszInfo();
+        Czytelnik Czytelnik1 = new Czytelnik("Jan", "Kowalski", 123, 2);
+        Czytelnik Czytelnik2 = new Czytelnik("Anna", "Nowak", 345, 5);
+        Czytelnik Czytelnik3 = new Czytelnik("Maria", "Kwiatkowska", 235, 6);
 
 
+        Czytelnik1.wypiszDane();
+        Czytelnik2.wypiszDane();
+        Czytelnik3.wypiszDane();
+
+        Czytelnik1.zwiekszLiczbeWypozyczen();
+        Czytelnik2.zwiekszLiczbeWypozyczen();
+        Czytelnik3.zwiekszLiczbeWypozyczen();
+
+
+        System.out.println("Po zwiększeniu wypożyczeń:");
+        Czytelnik1.wypiszDane();
+        Czytelnik2.wypiszDane();
+        Czytelnik3.wypiszDane();
+
+        Czytelnik1.zmniejszLiczbeWypozyczen();
+        Czytelnik2.zmniejszLiczbeWypozyczen();
+        Czytelnik3.zmniejszLiczbeWypozyczen();
+
+        System.out.println("Po zmniejszeniu wypożyczeń:");
+        Czytelnik1.wypiszDane();
+        Czytelnik2.wypiszDane();
+        Czytelnik3.wypiszDane();
 
 
 
